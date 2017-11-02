@@ -1,0 +1,814 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F7DDA28C-1F4C-4406-99CF-668E2DEE0022}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EmployeeManagement</RootNamespace>
+    <AssemblyName>EmployeeManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountHome.designer.cs">
+      <DependentUpon>AccountHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Addemployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Addemployee.Designer.cs">
+      <DependentUpon>Addemployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addFood_Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addFood_Details.designer.cs">
+      <DependentUpon>addFood_Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Addlocations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Addlocations.designer.cs">
+      <DependentUpon>Addlocations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddNewBeverage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewBeverage.designer.cs">
+      <DependentUpon>AddNewBeverage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddNewGrocer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewGrocer.designer.cs">
+      <DependentUpon>AddNewGrocer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addOrder.cs" />
+    <Compile Include="AddStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddStock.designer.cs">
+      <DependentUpon>AddStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSupplier.designer.cs">
+      <DependentUpon>AddSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AutoGenerateID.cs" />
+    <Compile Include="BarMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BarMain.designer.cs">
+      <DependentUpon>BarMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Barmanagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Barmanagement.designer.cs">
+      <DependentUpon>Barmanagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bevecry.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bevecry.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BeverageCrystal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BeverageCrystal.Designer.cs">
+      <DependentUpon>BeverageCrystal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BeverageOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BeverageOrders.designer.cs">
+      <DependentUpon>BeverageOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chart.Designer.cs">
+      <DependentUpon>Chart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckOut.designer.cs">
+      <DependentUpon>CheckOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cleaning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cleaning.designer.cs">
+      <DependentUpon>Cleaning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConnectionManager.cs" />
+    <Compile Include="CustomerSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerSummary.designer.cs">
+      <DependentUpon>CustomerSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DailyUsageGrocer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DailyUsageGrocer.designer.cs">
+      <DependentUpon>DailyUsageGrocer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EditSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditSupplier.designer.cs">
+      <DependentUpon>EditSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee.Designer.cs">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Attendence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Attendence.Designer.cs">
+      <DependentUpon>Attendence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Eventcry.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Eventcry.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EventCrystal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EventCrystal.Designer.cs">
+      <DependentUpon>EventCrystal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extraroom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Extraroom.designer.cs">
+      <DependentUpon>Extraroom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FixedStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FixedStock.designer.cs">
+      <DependentUpon>FixedStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FoodHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FoodHome.designer.cs">
+      <DependentUpon>FoodHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Front.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Front.designer.cs">
+      <DependentUpon>Front.cs</DependentUpon>
+    </Compile>
+    <Compile Include="function.cs" />
+    <Compile Include="GrocerFoods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GrocerFoods.designer.cs">
+      <DependentUpon>GrocerFoods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GymManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GymManagement.designer.cs">
+      <DependentUpon>GymManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="laundcry.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>laundcry.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Laundry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Laundry.designer.cs">
+      <DependentUpon>Laundry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="laundrycrustal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="laundrycrustal.Designer.cs">
+      <DependentUpon>laundrycrustal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LOGIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LOGIN.designer.cs">
+      <DependentUpon>LOGIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main.Designer.cs">
+      <DependentUpon>main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="main2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main2.Designer.cs">
+      <DependentUpon>main2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaintananeHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaintananeHome.designer.cs">
+      <DependentUpon>MaintananeHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manageleave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manageleave.Designer.cs">
+      <DependentUpon>manageleave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageRoomReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageRoomReservation.designer.cs">
+      <DependentUpon>ManageRoomReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Oders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Oders.designer.cs">
+      <DependentUpon>Oders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherExpences.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherExpences.designer.cs">
+      <DependentUpon>OtherExpences.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pay.Designer.cs">
+      <DependentUpon>pay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PoolGameManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PoolGameManagement.designer.cs">
+      <DependentUpon>PoolGameManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PurchaseStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PurchaseStock.designer.cs">
+      <DependentUpon>PurchaseStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Restaucry.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Restaucry.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Restaurentcrystal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Restaurentcrystal.Designer.cs">
+      <DependentUpon>Restaurentcrystal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Room Reservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Room Reservation.designer.cs">
+      <DependentUpon>Room Reservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RoomAvalblity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoomAvalblity.designer.cs">
+      <DependentUpon>RoomAvalblity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="roomcey.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>roomcey.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="roomcrystal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="roomcrystal.Designer.cs">
+      <DependentUpon>roomcrystal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StockHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StockHome.designer.cs">
+      <DependentUpon>StockHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Submit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Submit.designer.cs">
+      <DependentUpon>Submit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Summary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Summary.designer.cs">
+      <DependentUpon>Summary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supplier.designer.cs">
+      <DependentUpon>Supplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SupplierCredits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupplierCredits.designer.cs">
+      <DependentUpon>SupplierCredits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Suppliercry.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Suppliercry.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SupplierCrystal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupplierCrystal.Designer.cs">
+      <DependentUpon>SupplierCrystal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update.designer.cs">
+      <DependentUpon>Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateGrocer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateGrocer.designer.cs">
+      <DependentUpon>UpdateGrocer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateStock.designer.cs">
+      <DependentUpon>UpdateStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vehicle.designer.cs">
+      <DependentUpon>Vehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vehiclecrystal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vehiclecrystal.Designer.cs">
+      <DependentUpon>vehiclecrystal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleMaintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleMaintenance.designer.cs">
+      <DependentUpon>VehicleMaintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleReservation.designer.cs">
+      <DependentUpon>VehicleReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehiclesHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehiclesHome.designer.cs">
+      <DependentUpon>VehiclesHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vehicry.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>vehicry.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ViewGrocer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewGrocer.designer.cs">
+      <DependentUpon>ViewGrocer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="viewlev.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewlev.Designer.cs">
+      <DependentUpon>viewlev.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewReport.designer.cs">
+      <DependentUpon>ViewReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewRoom.designer.cs">
+      <DependentUpon>ViewRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewSupplier.designer.cs">
+      <DependentUpon>ViewSupplier.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AccountHome.resx">
+      <DependentUpon>AccountHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Addemployee.resx">
+      <DependentUpon>Addemployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addFood_Details.resx">
+      <DependentUpon>addFood_Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Addlocations.resx">
+      <DependentUpon>Addlocations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddNewBeverage.resx">
+      <DependentUpon>AddNewBeverage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddNewGrocer.resx">
+      <DependentUpon>AddNewGrocer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddStock.resx">
+      <DependentUpon>AddStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddSupplier.resx">
+      <DependentUpon>AddSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BarMain.resx">
+      <DependentUpon>BarMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Barmanagement.resx">
+      <DependentUpon>Barmanagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bevecry.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>bevecry.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BeverageCrystal.resx">
+      <DependentUpon>BeverageCrystal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BeverageOrders.resx">
+      <DependentUpon>BeverageOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chart.resx">
+      <DependentUpon>Chart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckOut.resx">
+      <DependentUpon>CheckOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cleaning.resx">
+      <DependentUpon>Cleaning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerSummary.resx">
+      <DependentUpon>CustomerSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DailyUsageGrocer.resx">
+      <DependentUpon>DailyUsageGrocer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditSupplier.resx">
+      <DependentUpon>EditSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee.resx">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attendence.resx">
+      <DependentUpon>Attendence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eventcry.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Eventcry.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventCrystal.resx">
+      <DependentUpon>EventCrystal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Extraroom.resx">
+      <DependentUpon>Extraroom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FixedStock.resx">
+      <DependentUpon>FixedStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FoodHome.resx">
+      <DependentUpon>FoodHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Front.resx">
+      <DependentUpon>Front.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GrocerFoods.resx">
+      <DependentUpon>GrocerFoods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GymManagement.resx">
+      <DependentUpon>GymManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="laundcry.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>laundcry.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laundry.resx">
+      <DependentUpon>Laundry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="laundrycrustal.resx">
+      <DependentUpon>laundrycrustal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LOGIN.resx">
+      <DependentUpon>LOGIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main.resx">
+      <DependentUpon>main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main2.resx">
+      <DependentUpon>main2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaintananeHome.resx">
+      <DependentUpon>MaintananeHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manageleave.resx">
+      <DependentUpon>manageleave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageRoomReservation.resx">
+      <DependentUpon>ManageRoomReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Oders.resx">
+      <DependentUpon>Oders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherExpences.resx">
+      <DependentUpon>OtherExpences.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pay.resx">
+      <DependentUpon>pay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PoolGameManagement.resx">
+      <DependentUpon>PoolGameManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="PurchaseStock.resx">
+      <DependentUpon>PurchaseStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Restaucry.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Restaucry.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Restaurentcrystal.resx">
+      <DependentUpon>Restaurentcrystal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Room Reservation.resx">
+      <DependentUpon>Room Reservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoomAvalblity.resx">
+      <DependentUpon>RoomAvalblity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="roomcey.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>roomcey.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="roomcrystal.resx">
+      <DependentUpon>roomcrystal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StockHome.resx">
+      <DependentUpon>StockHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Submit.resx">
+      <DependentUpon>Submit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Summary.resx">
+      <DependentUpon>Summary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supplier.resx">
+      <DependentUpon>Supplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupplierCredits.resx">
+      <DependentUpon>SupplierCredits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Suppliercry.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Suppliercry.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupplierCrystal.resx">
+      <DependentUpon>SupplierCrystal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update.resx">
+      <DependentUpon>Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateGrocer.resx">
+      <DependentUpon>UpdateGrocer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateStock.resx">
+      <DependentUpon>UpdateStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vehicle.resx">
+      <DependentUpon>Vehicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vehiclecrystal.resx">
+      <DependentUpon>vehiclecrystal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleMaintenance.resx">
+      <DependentUpon>VehicleMaintenance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleReservation.resx">
+      <DependentUpon>VehicleReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehiclesHome.resx">
+      <DependentUpon>VehiclesHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vehicry.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>vehicry.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewGrocer.resx">
+      <DependentUpon>ViewGrocer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewlev.resx">
+      <DependentUpon>viewlev.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewReport.resx">
+      <DependentUpon>ViewReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewRoom.resx">
+      <DependentUpon>ViewRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewSupplier.resx">
+      <DependentUpon>ViewSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\asd.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\client-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scroll-png-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\feature-online-account-manager-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attach.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fb8af9b1003eaaf5c36f2f065da4fca0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17410458_1498441850197712_414447194_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tj5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tj2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tj.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tj1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tj4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invoice_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invoice_icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invalid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\valid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
